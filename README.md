@@ -1,2 +1,2 @@
-# react_worls_atlas
+# react_world_atlas
 A dynamic travel web app for react practice.
