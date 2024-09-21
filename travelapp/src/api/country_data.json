@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "countryName": "Nepal",
+      "capital": "Kathmandu",
+      "population": 30187000,
+      "reasonToVisit": "Home to the Himalayas and Mount Everest, Nepal offers breathtaking landscapes and rich cultural heritage."
+    },
+    {
+      "id": 2,
+      "countryName": "Japan",
+      "capital": "Tokyo",
+      "population": 125800000,
+      "reasonToVisit": "A perfect blend of tradition and modernity, Japan offers historic temples, advanced technology, and stunning natural beauty."
+    },
+    {
+      "id": 3,
+      "countryName": "France",
+      "capital": "Paris",
+      "population": 67413000,
+      "reasonToVisit": "Known for its art, fashion, and cuisine, France is home to iconic landmarks like the Eiffel Tower and the Louvre."
+    },
+    {
+      "id": 4,
+      "countryName": "Brazil",
+      "capital": "Brasilia",
+      "population": 214300000,
+      "reasonToVisit": "Brazil is famous for its vibrant culture, Carnival festival, and natural wonders like the Amazon rainforest."
+    },
+    {
+      "id": 5,
+      "countryName": "Australia",
+      "capital": "Canberra",
+      "population": 25810000,
+      "reasonToVisit": "From the Great Barrier Reef to the Outback, Australia offers unique wildlife and diverse landscapes."
+    },
+    {
+      "id": 6,
+      "countryName": "Italy",
+      "capital": "Rome",
+      "population": 59550000,
+      "reasonToVisit": "Italy is a treasure trove of art, history, and cuisine, with iconic cities like Rome, Venice, and Florence."
+    },
+    {
+      "id": 7,
+      "countryName": "South Africa",
+      "capital": "Pretoria",
+      "population": 60042000,
+      "reasonToVisit": "South Africa is known for its stunning landscapes, diverse wildlife, and rich cultural heritage."
+    },
+    {
+      "id": 8,
+      "countryName": "Canada",
+      "capital": "Ottawa",
+      "population": 38990000,
+      "reasonToVisit": "Canada boasts vast natural beauty with its national parks, vibrant cities, and friendly atmosphere."
+    },
+    {
+      "id": 9,
+      "countryName": "India",
+      "capital": "New Delhi",
+      "population": 1428620000,
+      "reasonToVisit": "India offers a rich tapestry of cultures, historic landmarks like the Taj Mahal, and diverse landscapes."
+    },
+    {
+      "id": 10,
+      "countryName": "New Zealand",
+      "capital": "Wellington",
+      "population": 5084000,
+      "reasonToVisit": "New Zealand is famous for its stunning natural beauty, adventure sports, and Maori culture."
+    }
+  ]
+  

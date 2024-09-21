@@ -3,12 +3,408 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
 }
 
 body{
-  background-color: black;
+  background-color: rgb(24, 21, 21);
 }
 
 h1,h2,h3,h4,h4,h6{
   color: white;
 }
+
+/* Basic grid container */
+.grid {
+  display: grid;
+  gap: 8rem; /* Adjust the gap between grid items */
+  @media (max-width: 768px) {
+    gap: 2rem;
+  }
+}
+
+h1{
+  font-size: 2rem;
+  line-height: 2.3rem;
+}
+
+/* Responsive grid with 2 columns on medium and larger screens */
+.grid-2-cols {
+  grid-template-columns: 1fr; /* Default to single column */
+  align-items: center;
+
+  /* 2 columns for screens 768px and up */
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Default styling for small screens */
+.grid-cols-4 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 1 column by default */
+  gap: 1.5rem; /* Space between grid items */
+  padding: 1rem 0; /* Padding around the grid */
+}
+
+/* Medium screens (min-width: 500px) and up */
+@media (min-width: 600px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+}
+
+/* Large screens (min-width: 768px) and up */
+@media (min-width: 768px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large screens */
+  }
+}
+
+/* Extra large screens (min-width: 1024px) and up */
+@media (min-width: 1024px) {
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for extra large screens */
+  }
+}
+
+
+.page-header{
+  margin: auto;
+  text-align: center;
+  max-width: 40rem;
+}
+
+button{
+  padding:0.4rem 1rem;
+  border: 2px solid white;
+  font-size: 15px;
+  width: max-content;
+  font-weight: 400;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.container{
+  max-width:120rem;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+main{
+  margin: 2rem auto;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+p{
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+input , textarea , select , option{
+  border: 0.1rem solid rgba(220, 220, 220, 0.829);
+  background-color: rgba(37, 33, 33, 0.377);
+  color: gainsboro;
+  padding: 0.8rem 1rem;
+  border-radius: 0.8rem;
+  backdrop-filter: blur(25px);
+  outline: none;
+}
+
+.search-filter{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+form{
+  padding: 2rem 0;
+}
+
+form button {
+  width: 100%;
+  padding: 10px 1rem;
+}
+
+/* --------------------------------------------Navbar code ----------------------------------------- */
+header{
+  padding: 1rem 0;
+  background-color: rgb(32, 31, 31);
+  display: flex;
+}
+
+header div{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navbar-left{
+  width: max-content;
+}
+
+header div nav ul{
+  display: flex;
+  gap: 0.8rem;
+}
+
+/* -------------------------Hero tab--------------------------------------------------------------------  */
+.hero-content{
+  padding: 5rem 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* Hero Image Styling */
+.hero-image img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 20rem 20rem 4rem 4rem; 
+}
+
+/* -----------------------------------------------About page ----------------------------------------------- */
+.cards {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 1rem; /* Space between cards */
+  padding: 1rem; /* Padding around the container */
+}
+/* Card Container */
+.card {
+  max-width: 400px; /* Constrain card width */
+  margin: 1rem auto; /* Center and space between cards */
+  padding: 1.5rem; /* Inner padding */
+  background: rgba(71, 69, 69, 0.418); /* Semi-transparent black for glass effect */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle white border */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+  backdrop-filter: blur(10px); /* Blur effect for glass appearance */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effects */
+}
+
+/* Card Header */
+.card-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Divider line */
+  margin-bottom: 1rem; /* Space below header */
+}
+
+/* Country Name */
+.card-header h2 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5rem;
+  padding-bottom: 0.9rem; /* Heading size */
+  color: #fff; /* White text */
+}
+
+/* Text Styling */
+.card-body {
+  font-size: 1rem; /* Base font size */
+  line-height: 1.6; /* Improved readability */
+  color: rgba(255, 255, 255, 0.9); /* Light grey text for better contrast */
+}
+
+/* Population and Reason Text */
+.population {
+  font-weight: bold; /* Bolder font */
+  margin-bottom: 0.75rem; /* Space below */
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: translateY(-5px); /* Lift card slightly */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+
+/* -------------------------------------------Contact Form ----------------------------------------- */
+.contact-form{
+  display: flex;
+  max-width: 20rem;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin: auto;
+}
+
+/* Footer  */
+footer>div>p{
+  margin: auto;
+  width: max-content;
+  padding: 1rem 0;
+}
+
+/* Loader------------------------------------------------------------------------------------------------- */
+.loader {
+  height: 15px;
+  margin: 2rem auto;
+ 
+  aspect-ratio: 4;
+  --_g: no-repeat radial-gradient(farthest-side,#ffffff 90%,#0000);
+  background: 
+    var(--_g) left, 
+    var(--_g) right;
+  background-size: 25% 100%;
+  display: grid;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  height: inherit;
+  background-color: rgb(255, 255, 255);
+  aspect-ratio: 1;
+  grid-area: 1/1;
+  margin: auto;
+  border-radius: 50%;
+  transform-origin: -100% 50%;
+  animation: l49 1s infinite linear;
+}
+.loader:after {
+  transform-origin: 200% 50%;
+  --s:-1;
+  animation-delay: -.5s;
+}
+
+@keyframes l49 {
+  58%,
+  100% {transform: rotate(calc(var(--s,1)*1turn))}
+}
+
+/* ---------------------------------------------------------------------Country--------------------------- Card------------------------------------------------------------------------------------------------------  */
+.country-card {
+  max-width: 26rem;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with slight opacity */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Slight white border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px; /* Padding inside the card */
+  overflow: hidden; /* Ensure children stay within the bounds */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation for hover effects */
+  backdrop-filter: blur(10px); /* Background blur effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.country-card img {
+  width: 100%; /* Full width for the image */
+  height: 150px; /* Fixed height */
+  object-fit: cover; /* Cover the area */
+  border-radius: 8px; /* Rounded corners for image */
+  transition: transform 0.3s ease; /* Smooth zoom-in effect */
+}
+
+.country-card .country-info {
+  margin-top: 16px; /* Space between image and info */
+  color: #ffffff; /* White text */
+}
+
+.country-card .country-info p {
+  margin: 8px 0; /* Space between paragraphs */
+}
+
+.country-card:hover {
+  transform: translateY(-10px); /* Lift the card up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+
+/* Country Card  =================================================================================+++++++++ + */
+/* Overall styling for the main section */
+.country-details {
+  background: #121212; /* Dark background */
+  color: #e0e0e0; /* Light grey text for contrast */
+  padding: 2rem;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+  max-width: 1200px;
+}
+
+/* Grid layout for flag and info */
+.country-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+}
+
+/* Flag styling */
+.flag-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.country-flag {
+  width: 100%; /* Responsive image */
+  height: auto;
+  border-radius: 12px; /* Matching rounded corners */
+  transition: transform 0.3s; /* Smooth hover effect */
+}
+
+.country-flag:hover {
+  transform: translateY(-15px); /* Slight zoom on hover */
+}
+
+/* Information container styling */
+.info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Text styling */
+.country-name {
+  font-size: 2.5rem; /* Larger font for country name */
+  color: #ffcc00; /* Gold for emphasis */
+  margin-bottom: 1rem;
+}
+
+.common-name,
+.capital,
+.region,
+.subregion,
+.population,
+.languages,
+.currencies {
+  font-size: 1.1rem; /* Consistent font size */
+  color: #b0b0b0; /* Softer grey for details */
+  margin: 0.5rem 0;
+  line-height: 1.6; /* Better spacing between lines */
+  transition: color 0.3s; /* Smooth transition for color */
+}
+
+.info-container:hover .common-name,
+.info-container:hover .capital,
+.info-container:hover .region,
+.info-container:hover .subregion,
+.info-container:hover .population,
+.info-container:hover .languages,
+.info-container:hover .currencies {
+  color: #ffffff; /* Highlight text on hover */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .country-name {
+      font-size: 2rem; /* Adjust font size on smaller screens */
+  }
+
+  .country-container {
+      grid-template-columns: 1fr; /* Stack layout */
+      padding: 1rem; /* Adjust padding */
+  }
+}
+

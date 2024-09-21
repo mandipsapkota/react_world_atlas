@@ -1,9 +1,11 @@
-import React from 'react'
+import HeroSection from "../Components/UI/HeroSection";
+import About from "../pages/About"
 
-const Home = () => {
+export const Home = () => {
   return (
-    <div>Home</div>
+    <main>
+     <HeroSection/>
+     <About/>
+    </main>
   )
 }
-
-export default Home
